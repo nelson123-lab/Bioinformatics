@@ -29,6 +29,6 @@ def translate_rna(rna):
     return protein
 
 # Example usage
-string = "AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA"
+string = input()
 protein_string = translate_rna(string)
 print(protein_string)
