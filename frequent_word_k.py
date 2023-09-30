@@ -1,26 +1,16 @@
-from collections import defaultdict
-import re
+def most_freq_k_mers(DNA_string, k):
+    
+    kmersFreq = {}
+    for i in range(len(DNA_string)-k +1):
+        window = DNA_string[i:k+i]
+        kmersFreq[window] = kmersFreq.setdefault(window, 1) + 1
+    kmersFreq = dict(sorted(kmersFreq.items(), key = lambda x : (-x[1], x[0])))
 
-def find_k_most_frequent_words(text, k):
-    # Step 1: Define the word boundaries
-    word_pattern = r'\b\w+\b'  # Word pattern using word boundaries
+    max_value = list(kmersFreq.values())[0]
+    most_freq = [key for key, values in kmersFreq.items() if values == max_value]
+    return most_freq
 
-    # Step 2: Tokenize the text
-    tokens = re.findall(word_pattern, text)
-
-    # Step 3: Count word occurrences and find the k most frequent words
-    word_count = defaultdict(int)
-    for token in tokens:
-        word_count[token] += 1
-
-    sorted_words = sorted(word_count, key=word_count.get, reverse=True)
-    k_most_frequent = sorted_words[:k]
-
-    return k_most_frequent
-
-# Example usage
-text = "Thisisasampletext.Thistextcontainssomerepeatedwords.Sampletext."
-k = 3
-
-frequent_words = find_k_most_frequent_words(text, k)
-print(f"The {k} most frequent words in the text are: {frequent_words}")
+with open('DNA_data.txt', 'r') as f1:
+    lines = f1.read().split('\n')
+DNA_string, k  = lines[0], int(lines[1])
+print(most_freq_k_mers(DNA_string, k))
