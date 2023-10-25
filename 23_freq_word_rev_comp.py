@@ -46,6 +46,7 @@ def freq_word_rev_comp(text, k, d):
     # Iterating through kmer.
     for i in range(len(text) - k + 1):
         kmer = text[i:i+k]
+        # Finding the neighbors of the kmer.
         neighbors = generate_neighbors(kmer, d)
         # Iterating through the neighbors to find the mismatch count.
         for pattern in neighbors:
