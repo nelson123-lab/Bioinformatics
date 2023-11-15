@@ -9,9 +9,9 @@ def read_blast_results(file_path):
     with open(file_path, 'r') as file:
         for line in file:
             if line.startswith('#'):
-                continue  # Skip comment lines
+                continue 
             fields = line.strip().split('\t')
-            query_id, subject_id = fields[:2]  # Ignore additional fields for simplicity
+            query_id, subject_id = fields[:2]
             if query_id not in blast_results:
                 blast_results[query_id] = set()
             blast_results[query_id].add(subject_id)
@@ -43,11 +43,8 @@ def main():
 
     file1_results = read_blast_results(file1_path)
     file2_results = read_blast_results(file2_path)
-
     rbbh_pairs = find_rbbh(file1_results, file2_results)
-
     write_rbbh_to_file(rbbh_pairs, output_file)
-
     print(f"Done. RBBH from {file1_path} and {file2_path} are in {output_file}")
 
 if __name__ == "__main__":

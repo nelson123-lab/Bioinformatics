@@ -10,9 +10,9 @@ def identify_3way_rbbh(species1_species2, species2_species3, species3_species1):
             reciprocal_hits.append((protein1, protein2, protein3))
     return reciprocal_hits
 
-agla_tcas_file_path = 'Agla_query_v_Tdas_subject.txt'
-tcas_ldec_file_path = 'Tdas_query_v_Ldec_subject.txt'
-ldec_agla_file_path = 'Ldec_query_v_Agla_subject.txt'
+agla_tcas_file_path = 'output1\RBH-list-outfile_Agla_Tcas.txt'
+tcas_ldec_file_path = 'output\RBH-list-outfile_Tcas_Ldec.txt'
+ldec_agla_file_path = 'output1\RBH-list-outfile_Ldec_Agla.txt'
 
 agla_tcas_dict = read_blast_results(agla_tcas_file_path)
 tcas_ldec_dict = read_blast_results(tcas_ldec_file_path)

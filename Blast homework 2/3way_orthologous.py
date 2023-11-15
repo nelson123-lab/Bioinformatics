@@ -1,5 +1,6 @@
 import pandas as pd
 
+"""Function to preprocess the files and convert them into dictionaries"""
 def pre_process(filename):
     data = pd.read_csv(filename, sep='\t')
     data = data.iloc[:, :2]
@@ -8,9 +9,11 @@ def pre_process(filename):
     my_dict = dict(zip(keys, values))
     return my_dict
 
+"""Function to flip the dictiionary"""
 def flipped(dictionary): # key -> value, value -> key
     return {value: key for key, value in dictionary.items()}
 
+"""Function to find the rbbh"""
 def find_rbbh(file1_results, file2_results, file3_results):
     rbbh = []
     file2_results_F = flipped(file2_results) # T L 
