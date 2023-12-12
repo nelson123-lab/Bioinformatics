@@ -1,0 +1,137 @@
+---
+title: "Final Project RMarkdown"
+author: "Bioinformatics Fall 2023"
+date: "2023-11-29"
+output: html_document
+---
+# Set up R Environment 
+
+```{r, eval=FALSE}
+# install.packages("ISLR2")
+# install.packages("MASS")
+# install.packages("pcr")
+# install.packages("dplyr")
+# install.packages("tidyr")
+# install.packages("MASS")
+# install.packages("caret")
+# install.packages("pls")
+# install.packages("e1071")
+library(ISLR2)
+library(dplyr)
+library(tidyr)
+library(MASS)
+library(caret)
+library(e1071)
+library(pls)
+attach(Khan)
+```
+
+## Set Up Data  
+```{r, eval=FALSE}
+#place your code here 
+```
+
+# Logistic Regression 
+
+## Code 
+```{r, eval=FALSE}
+#place your code here 
+```
+
+## Questions 
+
+### How Many Genes/Components Are Obtained/Required Significant Results? 
+  In this question, based on your algorithm, are there a certain number of genes or components (depending on the algorithm) that can perform the classification of your problem? 
+
+### What is the Error Rate of These Algorithms? 
+  In this question, based on your algorithms, how much of the test dataset is misclassified?  
+  
+### What are two genes that were signficiantly correlated to your problem? 
+  In this question, based on your algorithm, identify and annotate 2 genes using [uniprot](uniprot.org). Do you think they are biologically relevant? 
+
+### What can we infer about this dataset based on these results? 
+  In this question, you should think about the overall classification results of this algorithm. Does the type of algorithm used here tell you anything about the data in this study? What is biologically meaningful about this? 
+
+## Linear Discriminant Analysis 
+
+## Code 
+```{r, eval=FALSE}
+#place your code here 
+```
+
+## Questions 
+
+### How Many Genes/Components Are Obtained/Required Significant Results? 
+  In this question, based on your algorithm, are there a certain number of genes or components (depending on the algorithm) that can perform the classification of your problem? 
+
+### What is the Error Rate of These Algorithms? 
+  In this question, based on your algorithms, how much of the test dataset is misclassified?  
+  
+### What are two genes that were signficiantly correlated to your problem? 
+  In this question, based on your algorithm, identify and annotate 2 genes using [uniprot](uniprot.org). Do you think they are biologically relevant? 
+
+### What can we infer about this dataset based on these results? 
+  In this question, you should think about the overall classification results of this algorithm. Does the type of algorithm used here tell you anything about the data in this study? What is biologically meaningful about this? 
+# Quadratic Discriminant Analysis 
+
+## Code 
+```{r, eval=FALSE}
+#place your code here 
+```
+
+## Questions 
+### How Many Genes/Components Are Obtained/Required Significant Results? 
+  In this question, based on your algorithm, are there a certain number of genes or components (depending on the algorithm) that can perform the classification of your problem? 
+
+### What is the Error Rate of These Algorithms? 
+  In this question, based on your algorithms, how much of the test dataset is misclassified? 
+  
+### What are two genes that were signficiantly correlated to your problem? 
+  In this question, based on your algorithm, identify and annotate 2 genes using [uniprot](uniprot.org). Do you think they are biologically relevant? 
+
+### What can we infer about this dataset based on these results? 
+  In this question, you should think about the overall classification results of this algorithm. Does the type of algorithm used here tell you anything about the data in this study? What is biologically meaningful about this? 
+  
+# Support Vector Machine 
+
+## Code 
+```{r, eval=FALSE}
+#place your code here 
+```
+
+## Questions 
+### How Many Genes/Components Are Obtained/Required Significant Results? 
+  In this question, based on your algorithm, are there a certain number of genes or components (depending on the algorithm) that can perform the classification of your problem? 
+
+### What is the Error Rate of These Algorithms? 
+  In this question, based on your algorithms, how much of the test dataset is misclassified? 
+  
+### What are two genes that were signficiantly correlated to your problem? 
+  In this question, based on your algorithm, identify and annotate 2 genes using [uniprot](uniprot.org). Do you think they are biologically relevant? 
+
+### What can we infer about this dataset based on these results? 
+  In this question, you should think about the overall classification results of this algorithm. Does the type of algorithm used here tell you anything about the data in this study? What is biologically meaningful about this? 
+  
+# Partial Least Squares 
+
+## Code 
+```{r, eval=FALSE}
+#place your code here 
+```
+
+## Questions 
+### How Many Genes/Components Are Obtained/Required Significant Results? 
+  In this question, based on your algorithm, are there a certain number of genes or components (depending on the algorithm) that can perform the classification of your problem? 
+
+### What is the Error Rate of These Algorithms? 
+  In this question, based on your algorithms, how much of the test dataset is misclassified? 
+  
+### What are two genes that were signficiantly correlated to your problem? 
+  In this question, based on your algorithm, identify and annotate 2 genes using [uniprot](uniprot.org). Do you think they are biologically relevant? 
+
+### What can we infer about this dataset based on these results? 
+  In this question, you should think about the overall classification results of this algorithm. Does the type of algorithm used here tell you anything about the data in this study? What is biologically meaningful about this? 
+
+# Final Result 
+## Which algorithm works best for your problem? Why? 
+  In this question, justify which algorithm you think is the best. Reasoning could include statistics, error rates, or biologically meaningful information. 
